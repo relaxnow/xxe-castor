@@ -10,6 +10,15 @@ To build a test just do ``mvn clean package``.
 The test tries to use XXE entity expansion to read ```src/main/resources/secret.txt```
 which contains ``super secret secret``.
 
+Castor version 0.9.5 vulnerable
+-----------------------------
+Output from ```java -jar target/xxe-castor.095-xxe-1.0-SNAPSHOT-jar-with-dependencies.jar```
+
+```
+Oct 08, 2021 10:44:22 AM com.veracode.xxe.castor.Main main
+INFO: Person name: super secret secret
+```
+
 Castor version 1.2 vulnerable
 -----------------------------
 Output from ``` java -jar target/xxe-castor.12-xxe-1.0-SNAPSHOT-jar-with-dependencies.jar```
